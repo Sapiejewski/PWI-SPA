@@ -62,7 +62,7 @@ export const BackgroundBeams = React.memo(({ className }) => {
 	return (
 		<div
 			className={cn(
-				"absolute  h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center bg-cyan-950",
+				"absolute h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center bg-cyan-950 z-0",
 				className
 			)}>
 			<svg

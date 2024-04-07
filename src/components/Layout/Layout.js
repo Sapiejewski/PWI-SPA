@@ -3,12 +3,12 @@ import React, { useState } from "react"
 export const LayoutContext = React.createContext()
 
 const Layout = ({ children }) => {
-	const [currPage, setCurrPage] = useState("HomePage")
+	const [currPage, setCurrPage] = useState("Home")
 	return (
 		<LayoutContext.Provider value={{ currPage, setCurrPage }}>
 			<div>
-				<div className="relative w-full h-full flex items-center justify-center">
-					<Navbar className="top-2" />
+				<div className="w-full h-full flex flex-row justify-start items-start lg:justify-center ">
+					<Navbar />
 				</div>
 				{children}
 			</div>

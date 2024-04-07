@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals"
 import { sendToVercelAnalytics } from "./vitals"
 import Layout from "./components/Layout/Layout"
 
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
 ReactDOM.render(
 	<Layout>
 		<App />

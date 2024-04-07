@@ -6,11 +6,15 @@ const {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./src/**/*.{html,js}"],
+	content: ["./src/**/*.{html,js}", "./node_modules/flowbite/**/*.js"],
 	theme: {
 		extend: {},
 	},
-	plugins: [addVariablesForColors, require("@tailwindcss/aspect-ratio")],
+	plugins: [
+		addVariablesForColors,
+		require("@tailwindcss/aspect-ratio"),
+		require("flowbite/plugin"),
+	],
 }
 function addVariablesForColors({ addBase, theme }) {
 	let allColors = flattenColorPalette(theme("colors"))
