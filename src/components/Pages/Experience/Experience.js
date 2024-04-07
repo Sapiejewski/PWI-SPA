@@ -9,21 +9,21 @@ const Experience = () => {
 					<div className="flex flex-col lg:flex-row items-center justify-center">
 						<div className="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
 							<h2 className="text-3xl text-white font-bald mb-4">Experience</h2>
-							<p className="text-white text-lg font-bald leading-relaxed text-wrap pb-3">
+							<p className="text-white text-xl font-bald leading-relaxed text-wrap pb-3">
 								KNF Next.js Fullstack developer
 							</p>
 							<ul className="text-white text-lg leading-relaxed text-wrap">
 								<li className="text-white text-lg leading-relaxed text-wrap">
-									Projektowanie i wdrożenie systemu do obsługi wniosków o
-									licencję na działalność w kryptowalutach, opartej na Next.js
-									14, z bazą danych MongoDB. Zapewnianie zgodności systemu z
-									wymogami prawnymi i biznesowymi.
+									Design and implementation of a cryptocurrency license
+									application system based on Next.js 14 with a MongoDB
+									database. Ensuring system compliance with legal and business
+									requirements.
 								</li>
 								<li className="text-white text-lg leading-relaxed text-wrap">
-									Tworzenie systemu do wykrywania fałszywych ogłoszeń na
-									portalach ogłoszeniowych przy użyciu Pythona i bibliotek ML:
-									pandas, scikit-learn. Stworzenie aplikacji webowej w Next.js
-									do prezentacji wyników modelu.
+									Development of a system for detecting fake ads on classifieds
+									portals using Python and ML libraries: pandas, scikit-learn.
+									Creation of a web application in Next.js to present the
+									results of the model.
 								</li>
 							</ul>
 
@@ -32,22 +32,22 @@ const Experience = () => {
 							</p>
 							<ul className="text-white text-lg leading-relaxed text-wrap">
 								<li className="text-white text-lg leading-relaxed text-wrap">
-									Przeprowadzenie benchmarkingu banków w zakresie oferty
-									bankowości korporacyjnej.
+									Benchmarking of banks in terms of their corporate banking
+									offer.
 								</li>
 								<li className="text-white text-lg leading-relaxed text-wrap">
-									Analiza funkcjonalności stron internetowych.
+									Website Functionality Analysis
 								</li>
 							</ul>
 							<p className="text-white text-lg font-bald leading-relaxed text-wrap pt-6 pb-3">
-								PZU Konsultant
+								PZU Consultant
 							</p>
 							<ul className="text-white text-lg leading-relaxed text-wrap">
 								<li className="text-white text-lg leading-relaxed text-wrap">
-									Obsługa klientów infolinii.
+									Customer Service Hotline Support
 								</li>
 								<li className="text-white text-lg leading-relaxed text-wrap">
-									Pomoc klientom w zgłaszaniu roszczeń o odszkodowanie.{" "}
+									Assisting clients with filing compensation claims.
 								</li>
 							</ul>
 						</div>
