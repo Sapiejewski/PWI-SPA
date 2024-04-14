@@ -17,8 +17,8 @@ export function cn(...inputs) {
 const Projects = () => {
 	return (
 		<>
-			<div className="h-auto 2xl:h-screen w-full z-10 rounded-md    flex flex-col items-center pt-32 justify-center antialiased fixed">
-				<BentoGrid className="max-w-4xl z-20 mx-auto">
+			<div className="h-full w-full z-10 flex flex-col items-center pt-32 justify-center antialiased bg-cyan-950 py-10">
+				<div className="max-w-4xl z-20 mx-auto md:overflow-y-auto grid md:grid-cols-3 gap-4">
 					{items.map((item, i) => (
 						<BentoGridItem
 							key={i}
@@ -30,13 +30,12 @@ const Projects = () => {
 							className={i === 3 || i === 6 ? "md:col-span-2" : ""}
 						/>
 					))}
-				</BentoGrid>
+				</div>
 				<BackgroundBeams />
 			</div>
 		</>
 	)
 }
-
 const Skeleton = () => (
 	<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 )
@@ -57,7 +56,9 @@ const items = [
 		title: "Diabetes Prediction",
 		description:
 			"Predict the diabetes based on basic physical and lifestyle data",
-		header: <Skeleton />,
+		header: (
+			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-b from-indigo-400  to-yellow-300"></div>
+		),
 		href: "https://github.com/Sapiejewski/Diabetes-prediction",
 		icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
 	},
@@ -65,14 +66,18 @@ const items = [
 		title: "TicTacToe",
 		description:
 			"Basic TicTacToe game with option to play with computer or other player",
-		header: <Skeleton />,
+		header: (
+			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-r from-blue-300 via-blue-200 to-orange-200"></div>
+		),
 		href: "https://github.com/Sapiejewski/tic-tac-toe",
 		icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
 	},
 	{
 		title: "PDF exporter",
 		description: "Desktop Python app to export data from excel columns to pdf",
-		header: <Skeleton />,
+		header: (
+			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600"></div>
+		),
 		href: "https://github.com/Sapiejewski/PDF-and-Excel-Export-App",
 		icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
 	},
@@ -86,7 +91,9 @@ const items = [
 	{
 		title: "Portfolio Website",
 		description: "Potfolio website with all my experience and projects",
-		header: <Skeleton />,
+		header: (
+			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl  bg-gradient-to-r from-pink-500 to-orange-500"></div>
+		),
 		href: "https://github.com/Sapiejewski/PWI-SPA",
 		icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
 	},

@@ -4,7 +4,7 @@ import { BackgroundBeams } from "../../Background/BackgroundBeams"
 const AboutMe = () => {
 	return (
 		<>
-			<div className="h-auto sm:h-screen w-full z-10 rounded-md  relative pt-30 flex flex-col items-center justify-center antialiased">
+			<div className="h-screen w-full z-10 rounded-md  relative pt-30 flex flex-col items-center justify-center antialiased">
 				<section className="pt-48 sm:pt-32 mb-10 bg-transparent z-30">
 					<div className="mx-auto px-4 z-40">
 						<div className="flex flex-col lg:flex-row items-center justify-center">

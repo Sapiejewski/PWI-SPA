@@ -46,11 +46,11 @@ const Navbar = () => {
 									<div className="">
 										<Tab.List className="-mb-px flex space-x-8 px-4">
 											<div className="flex flex-col h-full w-full space-x-8 xl:space-x-12 items-center justify-center">
-												<MenuItem item={"Home"} />
+												<MenuItem item={"Home"} setOpen={setOpen} />
 												{/* <MenuItem item={"CV"} /> */}
-												<MenuItem item={"Projects"} />
-												<MenuItem item={"Experience"} />
-												<MenuItem item={"About Me"} />
+												<MenuItem item={"Projects"} setOpen={setOpen} />
+												<MenuItem item={"Experience"} setOpen={setOpen} />
+												<MenuItem item={"About Me"} setOpen={setOpen} />
 											</div>
 										</Tab.List>
 									</div>
@@ -77,11 +77,11 @@ const Navbar = () => {
 						<div className="flex h-16 justify-between">
 							<Popover.Group className="hiddenlg:ml-8 lg:block lg:self-stretch">
 								<div className="flex h-full w-full space-x-8 xl:space-x-12 items-center justify-center">
-									<MenuItem item={"Home"} />
+									<MenuItem item={"Home"} setOpen={setOpen} />
 									{/* <MenuItem item={"CV"} /> */}
-									<MenuItem item={"Projects"} />
-									<MenuItem item={"Experience"} />
-									<MenuItem item={"About Me"} />
+									<MenuItem item={"Projects"} setOpen={setOpen} />
+									<MenuItem item={"Experience"} setOpen={setOpen} />
+									<MenuItem item={"About Me"} setOpen={setOpen} />
 								</div>
 							</Popover.Group>
 						</div>
@@ -93,13 +93,14 @@ const Navbar = () => {
 }
 
 export default Navbar
-function MenuItem({ item }) {
+function MenuItem({ item, setOpen }) {
 	const { setCurrPage } = useContext(LayoutContext)
 
 	return (
 		<div
 			onClick={() => {
 				setCurrPage(item)
+				setOpen(false)
 			}}
 			className="flex justify-center items-center">
 			<p className="text-left w-full cursor-pointer text-white hover:opacity-[0.9] text-lg md:text-2xl dark:text-white">

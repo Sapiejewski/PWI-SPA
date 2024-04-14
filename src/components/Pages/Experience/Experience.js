@@ -3,12 +3,12 @@ import { BackgroundBeams } from "../../Background/BackgroundBeams"
 
 const Experience = () => {
 	return (
-		<div className="h-auto 2xl:h-screen w-full z-10 rounded-md  relative pt-30 flex flex-col items-center justify-center antialiased">
+		<div className="h-screen  w-full z-10 rounded-md  relative pt-30 flex flex-col items-center justify-center antialiased">
 			<section className="pt-48 sm:pt-32 mb-10  bg-transparent z-30">
 				<div className="mx-auto px-4 z-40">
 					<div className="flex flex-col lg:flex-row items-center justify-center">
 						<div className="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
-							<h2 className="text-3xl text-white font-bald mb-4">Experience</h2>
+							<h2 className="text-3xl text-white font-bold mb-4">Experience</h2>
 							<p className="text-white text-xl font-bald leading-relaxed text-wrap pb-3">
 								KNF Next.js Fullstack developer
 							</p>
