@@ -1,15 +1,17 @@
-import React, { useContext, useState } from "react"
-import { Fragment } from "react"
-import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
+import React, { useContext, useState, Fragment } from "react"
+import { Dialog, Tab, Transition } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-
 import { LayoutContext } from "../Layout/Layout"
+import LanguageFlag from "../LanguageFlag/LanguageFlag"
+import { useLanguage } from "../../Context/LanguageContext"
 
 const Navbar = () => {
+	const { t } = useLanguage()
 	const [open, setOpen] = useState(false)
-	// const [currPage, setCurrPage] = useContext(LayoutContext)
+	// const [currPage, setCurrPage] = useContext(LayoutContext);
+
 	return (
-		<div className="absolute bg-[rgba(0,0,0,0)] w-6/12 z-50 items-start justify-start">
+		<div className="absolute bg-transparent w-9/12 z-50 items-start justify-start">
 			<Transition.Root show={open} as={Fragment}>
 				<Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
 					<Transition.Child
@@ -44,14 +46,28 @@ const Navbar = () => {
 								</div>
 								<Tab.Group as="div" className="mt-2">
 									<div className="">
-										<Tab.List className="-mb-px flex space-x-8 px-4">
-											<div className="flex flex-col h-full w-full space-x-8 xl:space-x-12 items-center justify-center">
-												<MenuItem item={"Home"} setOpen={setOpen} />
-												{/* <MenuItem item={"CV"} /> */}
-												<MenuItem item={"Projects"} setOpen={setOpen} />
-												<MenuItem item={"Experience"} setOpen={setOpen} />
-												<MenuItem item={"About Me"} setOpen={setOpen} />
-											</div>
+										<Tab.List className="mb-px flex flex-col space-y-4 px-4">
+											<MenuItem
+												item={t("NavbarItem1")}
+												setOpen={setOpen}
+												href="Home"
+											/>
+											<MenuItem
+												item={t("NavbarItem2")}
+												setOpen={setOpen}
+												href="Projects"
+											/>
+											<MenuItem
+												item={t("NavbarItem3")}
+												setOpen={setOpen}
+												href="Experience"
+											/>
+											<MenuItem
+												item={t("NavbarItem4")}
+												setOpen={setOpen}
+												href="About Me"
+											/>
+											<LanguageFlag />
 										</Tab.List>
 									</div>
 									<Tab.Panels as={Fragment}></Tab.Panels>
@@ -72,18 +88,32 @@ const Navbar = () => {
 			<header className="hidden w-full lg:flex items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)]">
 				<nav
 					aria-label="Top"
-					className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<div className="">
+					className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+					<div className="flex justify-center items-center">
 						<div className="flex h-16 justify-between">
-							<Popover.Group className="hiddenlg:ml-8 lg:block lg:self-stretch">
-								<div className="flex h-full w-full space-x-8 xl:space-x-12 items-center justify-center">
-									<MenuItem item={"Home"} setOpen={setOpen} />
-									{/* <MenuItem item={"CV"} /> */}
-									<MenuItem item={"Projects"} setOpen={setOpen} />
-									<MenuItem item={"Experience"} setOpen={setOpen} />
-									<MenuItem item={"About Me"} setOpen={setOpen} />
-								</div>
-							</Popover.Group>
+							<div className="flex h-full w-full gap-x-8 xl:gap-x-12 items-center justify-center">
+								<MenuItem
+									item={t("NavbarItem1")}
+									setOpen={setOpen}
+									href="Home"
+								/>
+								<MenuItem
+									item={t("NavbarItem2")}
+									setOpen={setOpen}
+									href="Projects"
+								/>
+								<MenuItem
+									item={t("NavbarItem3")}
+									setOpen={setOpen}
+									href="Experience"
+								/>
+								<MenuItem
+									item={t("NavbarItem4")}
+									setOpen={setOpen}
+									href="About Me"
+								/>
+								<LanguageFlag />
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -93,17 +123,18 @@ const Navbar = () => {
 }
 
 export default Navbar
-function MenuItem({ item, setOpen }) {
+
+function MenuItem({ item, setOpen, href }) {
 	const { setCurrPage } = useContext(LayoutContext)
 
 	return (
 		<div
 			onClick={() => {
-				setCurrPage(item)
+				setCurrPage(href)
 				setOpen(false)
 			}}
 			className="flex justify-center items-center">
-			<p className="text-left w-full cursor-pointer text-white hover:opacity-[0.9] text-lg md:text-2xl dark:text-white">
+			<p className="text-center cursor-pointer text-white hover:opacity-90 text-lg md:text-2xl dark:text-white">
 				{item}
 			</p>
 		</div>

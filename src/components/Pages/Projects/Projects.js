@@ -10,11 +10,59 @@ import {
 } from "@tabler/icons-react"
 import { BackgroundBeams } from "../../Background/BackgroundBeams"
 import TripSplit from "./TripSplit"
+import { useLanguage } from "../../../Context/LanguageContext"
 export function cn(...inputs) {
 	return twMerge(clsx(inputs))
 }
 
 const Projects = () => {
+	const { t } = useLanguage()
+	const items = [
+		{
+			title: t("ProjectsItem1"),
+			description: t("ProjectsItemDetails1"),
+			header: (
+				<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-b from-indigo-400  to-yellow-300"></div>
+			),
+			href: "https://github.com/Sapiejewski/Diabetes-prediction",
+			icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+		},
+		{
+			title: t("ProjectsItem2"),
+			description: t("ProjectsItemDetails2"),
+			header: (
+				<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-r from-blue-300 via-blue-200 to-orange-200"></div>
+			),
+			href: "https://github.com/Sapiejewski/tic-tac-toe",
+			icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+		},
+		{
+			title: t("ProjectsItem3"),
+			description: t("ProjectsItemDetails3"),
+			header: (
+				<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600"></div>
+			),
+			href: "https://github.com/Sapiejewski/PDF-and-Excel-Export-App",
+			icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+		},
+		{
+			title: t("ProjectsItem4"),
+			description: t("ProjectsItemDetails4"),
+			header: <TripSplit />,
+			href: "https://github.com/Sapiejewski/Trip-split",
+			icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+		},
+		{
+			title: t("ProjectsItem5"),
+			description: t("ProjectsItemDetails5"),
+			header: (
+				<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl  bg-gradient-to-r from-pink-500 to-orange-500"></div>
+			),
+			href: "https://github.com/Sapiejewski/PWI-SPA",
+			icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+		},
+	]
+
 	return (
 		<>
 			<div className="h-full w-full z-10 flex flex-col items-center pt-32 justify-center antialiased bg-cyan-950 py-10">
@@ -36,9 +84,9 @@ const Projects = () => {
 		</>
 	)
 }
-const Skeleton = () => (
-	<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-)
+// const Skeleton = () => (
+// 	<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+// )
 export default Projects
 export const BentoGrid = ({ className, children }) => {
 	return (
@@ -51,53 +99,6 @@ export const BentoGrid = ({ className, children }) => {
 		</div>
 	)
 }
-const items = [
-	{
-		title: "Diabetes Prediction",
-		description:
-			"Predict the diabetes based on basic physical and lifestyle data",
-		header: (
-			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-b from-indigo-400  to-yellow-300"></div>
-		),
-		href: "https://github.com/Sapiejewski/Diabetes-prediction",
-		icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-	},
-	{
-		title: "TicTacToe",
-		description:
-			"Basic TicTacToe game with option to play with computer or other player",
-		header: (
-			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-r from-blue-300 via-blue-200 to-orange-200"></div>
-		),
-		href: "https://github.com/Sapiejewski/tic-tac-toe",
-		icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-	},
-	{
-		title: "PDF exporter",
-		description: "Desktop Python app to export data from excel columns to pdf",
-		header: (
-			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600"></div>
-		),
-		href: "https://github.com/Sapiejewski/PDF-and-Excel-Export-App",
-		icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-	},
-	{
-		title: "TripSplit",
-		description: "App to split your trip bills equaly",
-		header: <TripSplit />,
-		href: "https://github.com/Sapiejewski/Trip-split",
-		icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-	},
-	{
-		title: "Portfolio Website",
-		description: "Potfolio website with all my experience and projects",
-		header: (
-			<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl  bg-gradient-to-r from-pink-500 to-orange-500"></div>
-		),
-		href: "https://github.com/Sapiejewski/PWI-SPA",
-		icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-	},
-]
 
 export const BentoGridItem = ({
 	className,
