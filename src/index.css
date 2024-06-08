@@ -14,3 +14,7 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+/* styles.css */
+[type="file"]:focus {
+	outline: none; /* Use a valid value here */
+}
